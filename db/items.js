@@ -2,16 +2,11 @@ const Joi = require('joi');
 const db = require('./connection');
  
 const schema = Joi.object().keys({
-    id: Joi.string().alphanum().required(),
     title: Joi.string().required(),
     description: Joi.string().max(500).required(),
     price: Joi.number().required(),
     stock: Joi.number().required(),
-    imageURL: Joi.string().uri({
-        scheme: [
-            /https?/
-        ]
-    })
+    imageURL: Joi.string().required()
 });
  
 const items = db.get('items');
