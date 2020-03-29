@@ -1,4 +1,10 @@
 <div class="jumbotron col-md-6 mx-auto m-3">
+  <div class="alert alert-danger" role="alert" *ngIf="this.error">
+    {{this.error.message}}
+    <hr>
+    {{this.error.error.details[0].message}}
+  </div>
+
   <form [formGroup]="addItemForm" (ngSubmit)="onSubmit(addItemForm.value)">
     <div class="form-group">
       <label for="titleInput">Title</label>

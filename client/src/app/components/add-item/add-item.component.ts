@@ -2,12 +2,14 @@ import { Component, OnInit } from '@angular/core';
 import {FormBuilder} from "@angular/forms";
 import {ItemsServiceService} from "../../services/items-service.service";
 
+
 @Component({
   selector: 'app-add-item',
   templateUrl: './add-item.component.html',
   styleUrls: ['./add-item.component.css']
 })
 export class AddItemComponent implements OnInit {
+  error;
   addItemForm;
 
   constructor(private formBuilder: FormBuilder, private itemsServiceService: ItemsServiceService) {
@@ -27,7 +29,13 @@ export class AddItemComponent implements OnInit {
   onSubmit(formData){
     this.itemsServiceService.createItem(formData).subscribe((data) => {
       console.log(data);
+    }, (error) => {
+      console.error(error);
+      this.error = error
     });
   }
 
+  stringify(data): string{
+    return JSON.stringify(data)
+  }
 }
