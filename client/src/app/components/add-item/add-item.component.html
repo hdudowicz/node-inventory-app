@@ -1,1 +1,35 @@
-<p>add-item works!</p>
+<div class="jumbotron col-md-6 mx-auto m-3">
+  <form [formGroup]="addItemForm" (ngSubmit)="onSubmit(addItemForm.value)">
+    <div class="form-group">
+      <label for="titleInput">Title</label>
+      <input type="text" class="form-control" id="titleInput" placeholder="Title" formControlName="title">
+    </div>
+
+    <div class="form-group">
+      <label for="descriptionInput">Description</label>
+      <input type="text" class="form-control" id="descriptionInput" placeholder="Description" formControlName="description">
+    </div>
+
+    <div class="form-group">
+      <label for="priceInput">Price</label>
+      <input type="number" class="form-control" id="priceInput" placeholder="Price" formControlName="price">
+    </div>
+
+    <div class="form-group">
+      <label for="stockInput">Stock</label>
+      <input type="number" class="form-control" id="stockInput" placeholder="Stock" formControlName="stock">
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrlInput">Image URL</label>
+      <input type="text" class="form-control" id="imageUrlInput" placeholder="Image URL" formControlName="imageURL" req>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+<!--title: string;
+  description: string;
+  price: number;
+  stock: number;
+  imageURL: string;-->

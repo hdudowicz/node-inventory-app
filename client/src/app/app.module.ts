@@ -7,6 +7,7 @@ import { ItemsComponent } from './components/items/items.component';
 import { ItemCardComponent } from './components/item-card/item-card.component';
 import {HttpClientModule} from "@angular/common/http";
 import { AddItemComponent } from './components/add-item/add-item.component';
+import {ReactiveFormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddItemComponent } from './components/add-item/add-item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
