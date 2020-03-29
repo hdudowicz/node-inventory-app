@@ -25,36 +25,9 @@
     margin: 0;
   }
 
-  .spacer {
-    flex: 1;
-  }
-
-  .toolbar {
-    /*position: absolute;*/
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    background-color: #1976d2;
-    color: white;
-    font-weight: 600;
-  }
-
   .toolbar img {
     margin: 0 16px;
   }
-
-  .toolbar #twitter-logo {
-    height: 40px;
-    margin: 0 16px;
-  }
-
-  .toolbar #twitter-logo:hover {
-    opacity: 0.8;
-  }
-
 
   .card svg.material-icons path {
     fill: #888;
@@ -99,19 +72,6 @@
     display: flex;
     align-items: center;
   }
-  .github-star-badge .material-icons {
-    height: 16px;
-    width: 16px;
-    margin-right: 4px;
-  }
-
-  svg#clouds {
-    position: fixed;
-    bottom: -160px;
-    left: -230px;
-    z-index: -10;
-    width: 1920px;
-  }
 
   .nav-item{
     font-size: 1.2rem;
@@ -120,28 +80,12 @@
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
-
-    .card-container > *:not(.circle-link) ,
-    .terminal {
-      width: 100%;
-    }
-
     .card.highlight-card span {
       margin-left: 72px;
     }
 
-    svg#rocket-smoke {
-      right: 120px;
-      transform: rotate(-5deg);
-    }
   }
 
-  @media screen and (max-width: 575px) {
-    svg#rocket-smoke {
-      display: none;
-      visibility: hidden;
-    }
-  }
 </style>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
@@ -158,6 +102,7 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link active" routerLink="/" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" routerLink="/add-item" routerLinkActive="active">Add Item</a>
+      <a class="nav-item nav-link" routerLink="/view-items" routerLinkActive="active">Modify/View Items</a>
 <!--      <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
     </div>
   </div>
