@@ -1,0 +1,49 @@
+<div class="jumbotron col-md-6 mx-auto m-3">
+<!--  <div class="alert alert-danger" role="alert" *ngIf="this.error">-->
+<!--    {{this.error.message}}-->
+<!--    <hr>-->
+<!--    {{this.error.error.details[0].message}}-->
+<!--  </div>-->
+
+<!--  <form [formGroup]="addItemForm" (ngSubmit)="onSubmit(addItemForm.value)">-->
+  <form [formGroup]="modifyItemForm" (ngSubmit)="onSubmit(modifyItemForm.value)">
+    <div class="form-group">
+      <label for="idInput">ID</label>
+      <input type="text" class="form-control" id="idInput"
+             placeholder="ID" formControlName="_id" value="{{item._id}}">
+    </div>
+
+    <div class="form-group">
+      <label for="titleInput">Title</label>
+      <input type="text" class="form-control" id="titleInput"
+             placeholder="Title" formControlName="title" value="{{item.title}}">
+    </div>
+
+    <div class="form-group">
+      <label for="descriptionInput">Description</label>
+      <input type="text" class="form-control" id="descriptionInput"
+             placeholder="Description" formControlName="description" value="{{item.description}}">
+
+    </div>
+
+    <div class="form-group">
+      <label for="priceInput">Price</label>
+      <input type="number" class="form-control" id="priceInput"
+             placeholder="Price" formControlName="price" value="{{item.price}}">
+    </div>
+
+    <div class="form-group">
+      <label for="stockInput">Stock</label>
+      <input type="number" class="form-control" id="stockInput"
+             placeholder="Stock" formControlName="stock" value="{{item.stock}}">
+    </div>
+
+    <div class="form-group">
+      <label for="imageUrlInput">Image URL</label>
+      <input type="text" class="form-control" id="imageUrlInput"
+             placeholder="Image URL" formControlName="imageURL" value="{{item.imageURL}}">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>

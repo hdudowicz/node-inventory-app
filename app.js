@@ -45,7 +45,7 @@ const morgan = require('morgan');
  
 const app = express();
 
-const items = require('./db/items')
+const items = require('./db/items');
  
 app.use(morgan('tiny'));
 app.use(cors());
@@ -72,6 +72,17 @@ app.post('/items', (req, res) => {
       res.json(error);
       console.log(error)
   });
+});
+
+app.post('/modify', (req, res) => {
+    console.log(req.body);
+    items.update(req.body).then((item) => {
+        res.json(item);
+    }).catch((error) => {
+        res.status(500);
+        res.json(error);
+        console.log(error)
+    });
 });
 
 const port = process.env.PORT || 4000;
