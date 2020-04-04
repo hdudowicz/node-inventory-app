@@ -77,6 +77,14 @@
     font-size: 1.2rem;
   }
 
+  #github{
+    font-size: 3rem;
+    color: white;
+  }
+  #github:hover{
+    color: lightgray;
+    cursor: pointer;
+  }
 
   /* Responsive Styles */
   @media screen and (max-width: 767px) {
@@ -94,18 +102,19 @@
     alt="Angular Logo"
     src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg=="
   />
-  <a class="navbar-brand" href="#">Navbar</a>
+  <a class="navbar-brand" href="//hddev.tech">HDDev</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
-      <a class="nav-item nav-link active" routerLink="/" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-item nav-link" routerLink="/" routerLinkActive="active">Home <span class="sr-only">(current)</span></a>
       <a class="nav-item nav-link" routerLink="/add-item" routerLinkActive="active">Add Item</a>
       <a class="nav-item nav-link" routerLink="/view-items" routerLinkActive="active">Modify/View Items</a>
 <!--      <a class="nav-item nav-link" href="#" tabindex="-1" aria-disabled="true">Disabled</a>-->
     </div>
   </div>
+  <a class="float-right h-100" href="//www.github.com/hdudowicz"><i class="fab fa-github-square" id="github"></i></a>
 </nav>
 
 <div class="container-fluid" role="main">
